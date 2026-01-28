@@ -3,27 +3,49 @@
 @tailwind utilities;
 
 :root {
-  --background: #FFFBEB; /* yellow-50 */
-  --foreground: #171717;
-  --primary-red: #E60000;
-  --accent-gold: #FFD700;
-  --tears-blue: #3FB1CE;
+  --background: #FFFBEB;
+  /* Amber-50, softer yellow */
+  --foreground: #1c1917;
+  /* Stone-900 */
+  --primary-red: #ef4444;
+  /* Red-500, brighter */
+  --accent-gold: #f59e0b;
+  /* Amber-500 */
+  --tears-blue: #38bdf8;
+  /* Sky-400 */
 }
 
 @layer utilities {
   .text-outline {
-    text-shadow: 2px 2px 0px #000;
+    text-shadow:
+      2px 2px 0px #000,
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
   }
+
   .text-outline-lg {
-    text-shadow: 4px 4px 0px #000;
+    text-shadow:
+      4px 4px 0px #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      2px 2px 0 #000;
   }
 }
 
 body {
   font-family: var(--font-paytone), sans-serif;
   color: var(--foreground);
+  background-color: var(--background);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-sigmar), cursive;
 }
